@@ -1,0 +1,35 @@
+  <div id="my-card" class="shell">
+        <div class="container">
+            <div class="row">
+
+                {{#each doc}}
+                <div class="col-md-3">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img">
+                            <img src="{{this.image}}"
+                                alt="Product" class="img-responsive" />
+                        </div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                                <span> <a style="color: white; font-weight:bold;" href="https://www.facebook.com/babablockproduction/"> Order Now</a></span>
+                            </div>
+                            <div class="title-product">
+                                <h3>{{this.name}}</h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>Low Cost to Build House no Need to Plaster. <span style="color: green;">Free Delivery</span> {{this.size}}</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">Rs <span style="color: #0ff1b3; font-size: 1.5rem;">{{this.price}}</span> Per Pcs </span></div>
+                                <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                            class="zmdi zmdi-shopping-basket"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+
+            </div>
+
+        </div>
+    </div>
