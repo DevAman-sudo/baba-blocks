@@ -60,7 +60,7 @@ router.get('/contact', (req, res) => {
 // })
 
 // nodemailer post request
-router.post("/api/v1/mail", (req, res) => {
+router.post("/", (req, res) => {
 
 
 	let mailOptions = {
