@@ -23,7 +23,10 @@ router.get('/', async (req, res) => {
 
 		const doc = await Product.find().limit(3);
 
-		res.status(200).render('index', { doc: doc });
+		res.status(200).render('index', {
+			msg: req.query.msg,
+			doc: doc,
+		});
 
 	} catch (err) {
 		res.redirect('/')
@@ -44,10 +47,18 @@ router.get('/projects', (req, res) => {
 // product route ...
 router.get('/products', async (req, res) => {
 
+	try {
 
 	const doc = await Product.find();
 
-	res.render('product', { doc: doc })
+	res.render('product', {
+		msg: req.query.msg,
+		doc: doc
+	})
+
+}catch(err) {
+	res.redirect('/products')
+}
 
 })
 
@@ -127,7 +138,7 @@ router.post("/", (req, res) => {
 			if (err) {
 				res.redirect('/');
 			} else {
-				res.render('index', { msg: "we have received your message" });
+				res.render('/?msg=' + "we have received your message");
 			}
 		});
 
@@ -159,7 +170,7 @@ router.post("/order", (req, res) => {
 			if (err) {
 				res.redirect('/products');
 			} else {
-				res.render('product', { msg: "we will call you soon." });
+				res.redirect('/products?msg=' + "we will call you soon.");
 			}
 		});
 
@@ -185,7 +196,7 @@ router.post('/subscribe', (req, res) => {
 			if (err) {
 				res.redirect('/');
 			} else {
-				res.render('index', { msg: "You're Subscribed" });
+				res.redirect('/?msg=' + "You're Subscribed");
 			}
 		});
 
