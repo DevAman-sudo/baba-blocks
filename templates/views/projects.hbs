@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {{>head}}
+
+   <style>
+
+      .img-container {
+         width: 90vw;
+         height: 100%;
+         padding: 2rem;
+         margin-left: -2rem;
+      }
+      .img-container img {
+         margin: auto;
+         padding: 0.5rem;
+         width: 20rem;
+         height: auto;
+         overflow: hidden;
+      }
+
+   </style>
+</head>
+
+<body class="sub_page">
+   <div class="hero_area">
+      <!-- header section strats -->
+      {{>navbar}}
+      <!-- end header section -->
+   </div>
+
+   <!-- client section -->
+   <section class="client_section layout_padding">
+      <div class="container">
+         <div class="heading_container heading_center">
+            <h2>
+               Blocks Projects
+            </h2>
+         </div>
+        
+        <div class="img-container">
+         <img src="./images/projects/pro1.png">
+         <img src="./images/projects/pro2.png">
+         <img src="./images/projects/pro4.png">
+         <img src="./images/projects/pro5.png">
+         <img src="./images/projects/pro7.png">
+         <img src="./images/projects/pro9.png">
+         <img src="./images/projects/pro11.png">
+         <img src="./images/projects/pro13.png">
+        </div>
+
+      </div>
+   </section>
+
+    <section class="client_section layout_padding">
+      <div class="container">
+         <div class="heading_container heading_center">
+            <h2>
+               Tiles Projects
+            </h2>
+         </div>
+        
+        <div class="img-container">
+         <img src="./images/projects/pro1.png">
+         <img src="./images/projects/pro7.png">
+         <img src="./images/projects/pro9.png">
+        </div>
+
+      </div>
+   </section>
+
+    <section class="client_section layout_padding">
+      <div class="container">
+         <div class="heading_container heading_center">
+            <h2>
+               InterLock Block Projects
+            </h2>
+         </div>
+        
+        <div class="img-container">
+         <img src="./images/projects/pro10.png">
+         <img src="./images/projects/pro12.png">
+        </div>
+
+      </div>
+   </section>
+
+   
+   <!-- end client section -->
+   <!-- footer section -->
+   {{>footer}}
+   <!-- footer section -->
+   <!-- jQery -->
+   <script src="js/jquery-3.4.1.min.js"></script>
+   <!-- popper js -->
+   <script src="js/popper.min.js"></script>
+   <!-- bootstrap js -->
+   <script src="js/bootstrap.js"></script>
+   <!-- custom js -->
+   <script src="js/custom.js"></script>
+</body>
+
+</html>

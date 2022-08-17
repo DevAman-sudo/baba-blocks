@@ -2,109 +2,16 @@
 <html>
 
 <head>
-   {{>head}}
+  {{>head}}
 </head>
 
-<body>
-
-{{>alert}}
-
+<body class="sub_page">
    <div class="hero_area">
-
-      {{!-- navbar --}}
+      <!-- header section strats -->
       {{>navbar}}
-
-      <!-- slider section -->
-      <section class="slider_section ">
-         <div style="opacity: .5;" class="slider_bg_box">
-            <img src="./images/brick.jpg" alt="">
-         </div>
-         <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-               <div class="carousel-item active">
-                  <div class="container ">
-                     <div class="row">
-                        <div class="col-md-7 col-lg-6 ">
-                           <div class="detail-box">
-                              <h1>
-                                 <span>
-                                    BABA Blocks
-                                 </span>
-                                 <br>
-                                 Productions
-                              </h1>
-                              <p style="font-weight: bold;">
-                                 Low Cost to Build House no Need to Plaster. Free Delivery
-                              </p>
-                              <div class="btn-box">
-                                 <a href="/products" class="btn1">
-                                    Shop Now
-                                 </a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item ">
-                  <div class="container ">
-                     <div class="row">
-                        <div class="col-md-7 col-lg-6 ">
-                           <div class="detail-box">
-                              <h1>
-                                 <span>
-                                    BABA Blocks
-                                 </span>
-                                 <br>
-                                 Productions
-                              </h1>
-                              <p style="font-weight: bold;">
-                                 Low Cost to Build House no Need to Plaster. Free Delivery </p>
-                              <div class="btn-box">
-                                 <a href="/products" class="btn1">
-                                    Shop Now
-                                 </a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container ">
-                     <div class="row">
-                        <div class="col-md-7 col-lg-6 ">
-                           <div class="detail-box">
-                              <h1>
-                                 <span>
-                                    BABA Blocks
-                                 </span>
-                                 <br>
-                                 Productions
-                              </h1>
-                              <pstyle="font-weight: bold;">Low Cost to Build House no Need to Plaster. Free Delivery </p>
-                              <div class="btn-box">
-                                 <a href="/products" class="btn1">
-                                    Shop Now
-                                 </a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="container">
-               <ol class="carousel-indicators">
-                  <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
-                  <li data-target="#customCarousel1" data-slide-to="1"></li>
-                  <li data-target="#customCarousel1" data-slide-to="2"></li>
-               </ol>
-            </div>
-         </div>
-      </section>
-      <!-- end slider section -->
+      <!-- end header section -->
    </div>
+  
    <!-- why section -->
    <section class="why_section layout_padding">
       <div class="container">
@@ -327,9 +234,7 @@
                      <h5>
                         Free Shiping
                      </h5>
-                     <p>
-
-                     </p>
+                     <p>  </p>
                   </div>
                </div>
             </div>
@@ -361,153 +266,9 @@
    </section>
    <!-- end why section -->
 
-
-   <!-- product section -->
-   <section class="product_section layout_padding">
-      <div class="container">
-         <div class="heading_container heading_center">
-            <h2>
-               Our <span>products</span>
-            </h2>
-         </div>
-         <div class="row">
-
-            {{#each doc}}
-            <div class="col-sm-6 col-md-4 col-lg-4">
-               <div class="box">
-                  <div class="option_container">
-                     <div class="options">
-
-                        <form action="/details" method="get">
-                           <input type="hidden" name="id" value="{{this._id}}">
-                           <button type="submit" style="border: none; background: none;">
-                              <a class="option2">
-                                 View Details
-                              </a>
-                           </button>
-                        </form>
-                     </div>
-                  </div>
-                  <div class="img-box">
-                     <img src="{{this.image}}" alt="">
-                  </div>
-                  <div class="detail-box">
-                     <h5>
-                        {{this.name}} {{this.size}}
-                     </h5>
-                     <h6>
-                        Rs{{this.price}}
-                     </h6>
-                  </div>
-               </div>
-            </div>
-            {{/each}}
-
-         </div>
-         <div class="btn-box">
-            <a href="/products">
-               View All products
-            </a>
-         </div>
-      </div>
-   </section>
-   <!-- end product section -->
-
-   <!-- subscribe section -->
-   <section class="subscribe_section">
-      <div class="container-fuild">
-         <div class="box">
-            <div class="row">
-               <div class="col-md-6 offset-md-3">
-                  <div class="subscribe_form ">
-                     <div class="heading_container heading_center">
-                        <h3>Subscribe To Get Discount Offers</h3>
-                     </div>
-                     <form action="/subscribe" method="post">
-                        <input type="email" name="email" placeholder="Enter your email" required>
-                        <button type="submit">
-                           subscribe
-                        </button>
-                     </form>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-   <!-- end subscribe section -->
-   <!-- client section -->
-   <section class="client_section layout_padding">
-      <div class="container">
-         <div class="heading_container heading_center">
-            <h2>
-               Our Projects
-            </h2>
-         </div>
-         <div id="carouselExample3Controls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-               <div class="carousel-item active">
-                  <div class="box col-lg-10 mx-auto">
-                     <div class="img_container">
-                        <div class="img-box">
-                           <div class="img_box-inner">
-                              <img src="./images/projects/pro2.png" alt="">
-                           </div>
-                        </div>
-                     </div>
-
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="box col-lg-10 mx-auto">
-                     <div class="img_container">
-                        <div class="img-box">
-                           <div class="img_box-inner">
-                              <img src="./images/projects/pro4.png" alt="">
-                           </div>
-                        </div>
-                     </div>
-
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="box col-lg-10 mx-auto">
-                     <div class="img_container">
-                        <div class="img-box">
-                           <div class="img_box-inner">
-                              <img src="./images/projects/pro5.png" alt="">
-                           </div>
-                        </div>
-                     </div>
-
-                  </div>
-               </div>
-            </div>
-            <div class="carousel_btn_box">
-               <a class="carousel-control-prev" href="#carouselExample3Controls" role="button" data-slide="prev">
-                  <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-                  <span class="sr-only">Previous</span>
-               </a>
-               <a class="carousel-control-next" href="#carouselExample3Controls" role="button" data-slide="next">
-                  <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                  <span class="sr-only">Next</span>
-               </a>
-            </div>
-         </div>
-
-         <div class="btn-box">
-            <a href="/projects">
-               View All Projects
-            </a>
-         </div>
-
-      </div>
-   </section>
-   <!-- end client section -->
-
-   {{!-- footer section --}}
+   <!-- footer section -->
    {{>footer}}
-
+   <!-- footer section -->
    <!-- jQery -->
    <script src="js/jquery-3.4.1.min.js"></script>
    <!-- popper js -->

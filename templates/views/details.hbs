@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>head}}
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/details.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+
+    {{>navbar}}
+
+
+
+
+    <!-- Shop Detail Start -->
+    <div class="container-fluid py-5">
+        <div class="row px-xl-5">
+            <div class="col-lg-5 pb-5">
+                <div id="product-carousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner border">
+                        <div class="carousel-item active">
+                            <img class="w-100 h-100" src="{{image}}" alt="Image">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-7 pb-5">
+                <h3 class="font-weight-semi-bold">{{name}} {{size}}</h3>
+
+                <h3 class="font-weight-semi-bold mb-4">Rs {{price}} Per Pcs</h3>
+                <p class="mb-4">
+                    {{desc}} </p>
+
+                <section class="why_section layout_padding">
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2">
+                                <div class="full">
+                                    <form action="/order" method="post">
+                                        <fieldset>
+                                            <input type="hidden" name="name" value="{{name}}">
+                                            <input type="text" placeholder="Enter your full name" name="username"
+                                                required />
+                                            <input type="email" placeholder="Enter your email address" name="email"
+                                                required />
+                                            <input type="number" placeholder="Enter your number" name="number"
+                                                required />
+                                                  <input type="number" placeholder="Number of Quantity" name="quantity"
+                                                required />
+                                            <textarea placeholder="Enter your message" name="message"
+                                                required></textarea>
+                                            <input type="submit" value="Place Your Order" />
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+
+            <!-- Shop Detail End -->
+
+
+            <!-- Products Start -->
+            <div class="container-fluid py-5">
+                <div class="text-center mb-4">
+                    <h2 class="section-title px-5"><span class="px-2">You May Also Like</span></h2>
+                </div>
+
+                <!-- product section -->
+                <section class="product_section layout_padding">
+                    <div class="container">
+
+                        <div class="row">
+
+                            {{#each doc}}
+                            <div class="col-sm-6 col-md-4 col-lg-4">
+                                <div class="box">
+                                    <div class="option_container">
+                                        <div class="options">
+
+                                            <form action="/details" method="get">
+                                                <input type="hidden" name="id" value="{{this._id}}">
+                                                <button type="submit" style="border: none; background: none;">
+                                                    <a class="option2">
+                                                        View Details
+                                                    </a>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="img-box">
+                                        <img src="{{this.image}}" alt="">
+                                    </div>
+                                    <div class="detail-box">
+                                        <h5>
+                                            {{this.name}} {{this.size}}
+                                        </h5>
+                                        <h6>
+                                            Rs{{this.price}}
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            {{/each}}
+
+                        </div>
+                        <div class="btn-box">
+                            <a href="/products">
+                                View All products
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <!-- end product section -->
+
+            </div>
+            <!-- Products End -->
+
+
+
+</body>
+
+</html>

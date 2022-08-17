@@ -18,6 +18,9 @@ const productSchema = new mongoose.Schema({
     size: {
         type: String
     },
+    desc: {
+        type: String
+    },
 
 
 });

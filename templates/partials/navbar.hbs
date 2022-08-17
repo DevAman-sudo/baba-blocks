@@ -1,92 +1,41 @@
-
-
-
-<head>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta name="x-apple-disable-message-reformatting">
-    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
-    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
-        integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-</head>
-
-<body>
-
-    <div class="hero_bg"></div>
-
-   
-    <header>
-
-        <nav id="navigation">
-
-            <div class="nav__column">
-
-                <a href="/" class="logo">
-
-                    <img src="./images/baba.svg">
-
+<!-- header section strats -->
+<header class="header_section">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <div style="display: flex; align-items:center;">
+                <a class="navbar-brand" href="/"><img width="70" src="images/logo.png" alt="#" /></a>
+                <a href="/">
+                    <h1
+                        style="color: #f7444e; font-size:2.5rem; font-weight: bold; font-family: 'Playfair Display', serif;">
+                        BABA <br> Blocks</h1>
                 </a>
-
             </div>
 
-            <div class="nav__column">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class=""> </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
 
-                <button class="toggle-menu">Menu
-                    <span class="hamburger-holder">
-                        <span class="hamburger"></span>
-                    </span>
-                </button>
-
-                <div class="menu-container">
-                    <ul class="list-menu">
-                         <li class="menu-item"><a href="/">Home<span class="green">.</span></a></li>
-                        <li class="menu-item"><a href="/404">About<span class="green">.</span></a></li>
-                        <li class="menu-item"><a href="/products">Products<span class="green">.</span></a></li>
-                        <li class="menu-item"><a href="/contact">Contact<span class="green">.</span></a></li>
-                    </ul>
-                </div>
-
+                </ul>
             </div>
         </nav>
-
-
-
-        <div class="hero_img">
-            <img style="opacity: .5;" src="./images/block.png">
-        </div>
-
-        <div class="hero_intro">
-
-            <div class="hello">
-                BABA Blocks<span class="green">.</span>
-            </div>
-
-            <h1>
-                Low Cost
-                <br />
-                Time Durable
-                <br />
-                Enviromental Friendly
-            </h1>
-
-        </div>
-
-    </header>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script>
-
-        $(document).ready(function () {
-
-            var $body = $('body');
-            var $btnMenu = $('.toggle-menu');
-
-            $btnMenu.click(function () {
-                $body.toggleClass('menu-open');
-            });
-        });
-
-
-    </script>
+    </div>
+</header>
+<!-- end header section -->
